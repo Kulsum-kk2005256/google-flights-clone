@@ -21,7 +21,6 @@ export const searchAirports = async (query) => {
   }
 };
 
-// Update the searchFlights function to match API requirements
 export const searchFlights = async (params) => {
   try {
     const response = await api.get('/searchFlights', { 
@@ -32,13 +31,13 @@ export const searchFlights = async (params) => {
         destinationEntityId: params.destinationEntityId,
         date: params.date,
         adults: params.adults || 1,
-        cabinClass: params.cabinClass || 'ECONOMY',
+        cabinClass: params.cabinClass || 'economy',
         currency: 'USD',
         market: 'US',
         countryCode: 'US'
       }
     });
-    return response.data.data?.itineraries || [];
+    return response.data.data.itineraries;
   } catch (error) {
     console.error('Flight search error:', error);
     return [];

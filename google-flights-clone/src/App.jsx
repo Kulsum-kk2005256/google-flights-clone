@@ -18,7 +18,7 @@ export default function App() {
     cabinClass: 'ECONOMY'
   })
 
-  // Update the handleSubmit function
+
 const handleSubmit = async (e) => {
   e.preventDefault();
   if (!formData.origin || !formData.destination) {
@@ -35,7 +35,7 @@ const handleSubmit = async (e) => {
       destinationEntityId: formData.destination.entityId,
       date: formData.departureDate.toISOString().split('T')[0],
       adults: formData.passengers,
-      cabinClass: formData.cabinClass
+      cabinClass: 'economy'
     };
 
     const results = await searchFlights(params);

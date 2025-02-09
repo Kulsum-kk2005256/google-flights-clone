@@ -8,11 +8,6 @@ export const Header = () => {
           <h1 className="text-2xl font-bold text-google-blue">
             Google Flights
           </h1>
-          <nav className="hidden md:flex space-x-4">
-            <button className="text-google-gray hover:text-google-blue">Trips</button>
-            <button className="text-google-gray hover:text-google-blue">Saved</button>
-            <button className="text-google-gray hover:text-google-blue">Explore</button>
-          </nav>
         </div>
         
         <div className="flex items-center space-x-4">
