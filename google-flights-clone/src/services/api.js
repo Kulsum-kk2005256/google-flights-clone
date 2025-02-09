@@ -38,7 +38,7 @@ export const searchFlights = async (params) => {
         countryCode: 'US'
       }
     });
-    return response.data.data || [];
+    return response.data.data?.itineraries || [];
   } catch (error) {
     console.error('Flight search error:', error);
     return [];
